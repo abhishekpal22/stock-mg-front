@@ -14,6 +14,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-size: 0.875rem;
 }
 
 body {
@@ -40,3 +41,20 @@ a {
     color-scheme: dark;
   }
 }
+
+
+/* add ooptions page */
+.MuiDataGrid-columnHeaderTitle {font-weight: bold!important;}
+.MuiToolbar-root {min-height: 50px!important;}
+.page-title-box{
+
+  .page-title{margin-top: 20px;text-align: center;}
+}
+.form-outer{padding: 20px;margin-top: 20px;margin-bottom: 20px;border-radius: 8px;}
+.form-btn-center{margin-top: 20px;text-align: center;}
+
+@media(max-width:900px){
+  .form-outer{padding: 10px;}
+  html,body{font-size: .75rem;}
+}
+/* add ooptions page */
