@@ -133,7 +133,7 @@ export default function ProductList({ refreshTrigger }) {
     return (
         <>
             <Box className="page-title-box" mb={2}>
-                <Typography className='page-title' variant='h5'>Product List's</Typography>
+                <Typography className='page-title' variant='h5'>Product Lists</Typography>
             </Box>
             <Paper >
 

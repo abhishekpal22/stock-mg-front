@@ -9,7 +9,7 @@ import { toCamelCase } from './utils/commonFunctions';
 import ProductList from './_components/ProductList';
 
 
-const page = () => {
+const Page = () => {
   const {
     control,
     handleSubmit,
@@ -272,4 +272,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

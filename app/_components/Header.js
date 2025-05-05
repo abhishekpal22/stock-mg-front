@@ -11,7 +11,7 @@ const Header = () => {
         {/* Logo */}
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-            Pal Brothser's <span>| Stock Management</span>
+            Pal Brothsers <span>| Stock Management</span>
           </Link>
         </Typography>
 

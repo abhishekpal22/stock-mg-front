@@ -6,7 +6,7 @@ import { usePostDataMutation } from '../utils/api/apiSlice'
 import { add_option } from '../utils/api/apiURLs'
 import { Controller, useForm } from 'react-hook-form'
 
-const page = () => {
+const Page = () => {
   const [postData] = usePostDataMutation()
   const {control, handleSubmit, reset,setError, formState: { errors }} = useForm({
     defaultValues: {
@@ -155,4 +155,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
