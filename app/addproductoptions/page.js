@@ -22,6 +22,8 @@ const Page = () => {
 
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [refreshProductList, setRefreshProductList] = useState(false);
+
 
   const handleOptionSubmit = (data) => {
     postData({
@@ -37,6 +39,8 @@ const Page = () => {
       });
       setSnackbarMessage(res.message);
       setSnackbarOpen(true);
+      setRefreshProductList(prev => !prev);  // toggles the state
+
     }).catch((err) => {
       console.error('Submission failed:', err);
       const fieldErrors = err?.data?.errors || {}
@@ -158,7 +162,7 @@ const Page = () => {
           </Box>
         </Box>
 
-        <OptionsList/>
+        <OptionsList refreshTrigger={refreshProductList} />
       </Container>
     </Box>
   )
