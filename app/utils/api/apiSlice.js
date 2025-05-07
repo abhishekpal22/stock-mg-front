@@ -3,6 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const apiSlice = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE || 'https://stock-mg-api.onrender.com/api' }),
+  // baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:5000/api' }),
   endpoints: (builder) => ({
     getData: builder.query({
       query: ({ endpoint }) => ({

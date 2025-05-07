@@ -112,6 +112,9 @@ export default function ProductList({ refreshTrigger }) {
         }
     })
 
+    console.log('rows======', rows);
+    
+
     const grandTotal = rows?.reduce((sum, row) => sum + Number(row.total || 0), 0);
 
     const [deleteData] = useDeleteDataMutation()

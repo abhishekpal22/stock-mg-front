@@ -6,6 +6,7 @@ import { usePostDataMutation } from '../utils/api/apiSlice'
 import { add_option } from '../utils/api/apiURLs'
 import { Controller, useForm } from 'react-hook-form'
 import Toast from '../_components/Toast'
+import OptionsList from '../_components/OptionsList'
 
 const Page = () => {
   const [postData] = usePostDataMutation()
@@ -157,6 +158,7 @@ const Page = () => {
           </Box>
         </Box>
 
+        <OptionsList/>
       </Container>
     </Box>
   )
