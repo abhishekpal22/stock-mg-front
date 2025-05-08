@@ -12,7 +12,7 @@ import IconButton from '@mui/material/IconButton';
 
 const paginationModel = { page: 0, pageSize: 5 };
 
-export default function OptionsList({ refreshTrigger }) {
+const  OptionsList = ({ refreshTrigger }) => {
 
     const isValidColor = (color) => {
         const s = new Option().style;
@@ -211,3 +211,5 @@ export default function OptionsList({ refreshTrigger }) {
         </>
     );
 }
+
+export default OptionsList
