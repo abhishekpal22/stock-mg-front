@@ -31,7 +31,7 @@ export default function ProductList({ refreshTrigger }) {
             headerName: 'Color Name',
             flex: 1, minWidth: 150,
             renderCell: (params) => {
-                const colors = params.value?.split(/[, ]+/).map((c) => c.trim()).filter(Boolean) || [];
+                const colors = params?.value?.split(/[, ]+/).map((c) => c.trim()).filter(Boolean) || [];
 
                 return (
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, height: "100%", alignContent: "center" }}>
@@ -62,7 +62,7 @@ export default function ProductList({ refreshTrigger }) {
         {
             field: 'size', headerName: 'Size', width: 80, renderCell: (params) => (
                 <Chip
-                    label={params.value.toUpperCase()}
+                    label={params?.value?.toUpperCase()}
                     color="secondary"
                     size="small"
                 />
@@ -80,7 +80,7 @@ export default function ProductList({ refreshTrigger }) {
             renderCell: (params) => (
                 <IconButton
                     color="error"
-                    onClick={() => handleDelete(params.row._id)} // Use _id here from row
+                    onClick={() => handleDelete(params?.row?._id)} // Use _id here from row
                 >
                     <DeleteOutlineIcon />
                 </IconButton>
@@ -112,8 +112,6 @@ export default function ProductList({ refreshTrigger }) {
         }
     })
 
-    console.log('rows======', rows);
-    
 
     const grandTotal = rows?.reduce((sum, row) => sum + Number(row.total || 0), 0);
 

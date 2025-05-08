@@ -52,6 +52,7 @@ a {
 }
 .form-outer{padding: 20px;margin-top: 20px;margin-bottom: 20px;border-radius: 8px;}
 .form-btn-center{margin-top: 20px;text-align: center;}
+.MuiDataGrid-selectedRowCount {display: none;}
 
 @media(max-width:900px){
   .form-outer{padding: 10px;}
